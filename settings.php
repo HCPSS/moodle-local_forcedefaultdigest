@@ -2,8 +2,8 @@
 
 if ($hassiteconfig) {
     $settings = new admin_settingpage(
-        'local_forceindividualemails',
-        'Force Individual Emails Configuration'
+        'local_forcedefaultdigest',
+        'Force Default Digest Configuration'
     );
 
     $ADMIN->add('localplugins', $settings);
@@ -28,9 +28,9 @@ if ($hassiteconfig) {
     }
 
     $settings->add(new admin_setting_configmulticheckbox(
-        'local_forceindividualemails/forums',
+        'local_forcedefaultdigest/forums',
         'Forums',
-        'The forums for which to force individual emails.',
+        'The forums for which to force default digest.',
         [],
         $choices
     ));
